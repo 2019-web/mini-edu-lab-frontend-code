@@ -1,0 +1,20 @@
+<text>pages/course/course.wxml</text>
+
+<view class="container">
+  <view class="course">
+    <navigator
+    url="../contents/contents?content_id=network"
+    hover-class="navigator-hover"
+    >
+    <button>计算机网络</button>
+    </navigator>
+  </view>
+  <view class="course">
+    <navigator
+    url="../contents/contents?content_id=datastructure"
+    hover-class="navigator-hover"
+    >
+    <button>数据结构</button>
+    </navigator>
+  </view>
+</view>  

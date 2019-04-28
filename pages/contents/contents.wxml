@@ -1,0 +1,18 @@
+<!--pages/contents/contents.wxml-->
+<text>pages/contents/contents.wxml</text>
+<view class="container">
+  <view class="contents">
+    <view wx:for="{{contents_name}}">
+    {{item.id}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}
+    
+    <view class="chatbox">
+        <navigator
+        url="../chatbox/chatbox?chatbox_id={{item.chatbox_id}}"
+        hover-class="navigator-hover"
+        >
+        <button>{{item.text}}</button>
+        </navigator>
+    </view>
+    </view>
+  </view>
+</view>  

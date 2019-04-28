@@ -1,0 +1,15 @@
+<!--pages/chatbox/chatbox.wxml-->
+<text>pages/chatbox/chatbox.wxml</text>
+<!-- padding-bottom:80px;限制区域大小，微信小程序中使用position:fixed遮挡正文内容解决 ​​​​
+ -->
+<view id="container" style="padding-bottom:80px;">
+<view>
+    <view wx:for="{{message}}" class='messageHeight'>
+    {{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.type}}
+    </view>
+  </view>
+</view>  
+
+<view class="bottom" style="width:100%;height:80px;border-top:1px solid red;background-color:#f0f0f0;position:fixed; bottom:0;">
+  <button bindtap="addMessage" disable="true">增加信息</button>
+</view>

@@ -1,0 +1,4 @@
+/* pages/course/course.wxss */
+.course {
+  margin-top: 20px; 
+}
