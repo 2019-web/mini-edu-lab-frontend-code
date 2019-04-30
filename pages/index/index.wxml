@@ -10,7 +10,7 @@
   <view style="margin-top:20px">
     <navigator
     url="../course/course"
-    hover-class="navigator-hover">
+    hover-class="navigator-hover" open-type="switchTab">
     <view class="page">
       <view class="page__hd">
         <view class="page__bd page__bd_spacing">
