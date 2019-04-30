@@ -6,10 +6,11 @@
 
 .some-page-wrapper {
     margin: 15px;
-    background-color: red;
+    /*background-color: red;*/
   }
   
   .row {
+   margin: 15px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -24,11 +25,16 @@
   }
   
   .blue-column {
-    background-color: blue;
+    /*background-color: blue;*/
     height: 100px;
   }
   
   .green-column {
       height: 100px;
-      background-color: green;
+      /*background-color: green;*/
+  }
+
+  .imgCourse {
+  	width:90%;
+  	height:90%;
   }

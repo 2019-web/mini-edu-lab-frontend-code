@@ -19,16 +19,69 @@
 </view>
 
 <view class='some-page-wrapper'>
+
   <view class='row'>
     <view class='column'>
       <view class='blue-column'>
-        Some Text in Column One
+        <image src="http://localhost:5300/assets/images/course/network.png" class="imgCourse"></image>
+        <text>计算机网络</text>
       </view>
     </view>
     <view class='column'>
       <view class='green-column'>
-        Some Text in Column Two
+        <image src="http://localhost:5300/assets/images/course/datastructure.png" class="imgCourse"></image>
+        <text>数据结构</text>
       </view>
     </view>
   </view>
+  
+  <view class='row'>
+    <view class='column'>
+      <view class='blue-column'>
+        <image src="http://localhost:5300/assets/images/course/network.png" class="imgCourse"></image>
+        <text>计算机网络</text>
+      </view>
+    </view>
+    <view class='column'>
+      <view class='green-column'>
+        <image src="http://localhost:5300/assets/images/course/datastructure.png" class="imgCourse"></image>
+        <text>数据结构</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='row'>
+    <view class='column'>
+      <view class='blue-column'>
+        <image src="http://localhost:5300/assets/images/course/network.png" class="imgCourse"></image>
+        <text>计算机网络</text>
+      </view>
+    </view>
+    <view class='column'>
+      <view class='green-column'>
+        <image src="http://localhost:5300/assets/images/course/datastructure.png" class="imgCourse"></image>
+        <text>数据结构</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='row'>
+    <view class='column'>
+      <view class='blue-column'>
+        <image src="http://localhost:5300/assets/images/course/network.png" class="imgCourse"></image>
+        <text>计算机网络</text>
+      </view>
+    </view>
+    <view class='column'>
+      <view class='green-column'>
+           
+<image src=" " class="imgCourse"></image>
+        <text> </text>
+
+        
+      </view>
+    </view>
+  </view>  
+
+
 </view>
