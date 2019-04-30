@@ -17,3 +17,18 @@
     </navigator>
   </view>
 </view>
+
+<view class='some-page-wrapper'>
+  <view class='row'>
+    <view class='column'>
+      <view class='blue-column'>
+        Some Text in Column One
+      </view>
+    </view>
+    <view class='column'>
+      <view class='green-column'>
+        Some Text in Column Two
+      </view>
+    </view>
+  </view>
+</view>
