@@ -1,4 +1,5 @@
 //app.js
+import chatboxApi from './apis/chatboxApi.js'
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -36,5 +37,6 @@ App({
   globalData: {
     userInfo: null,
     host: 'http://localhost:5300', // 后端的域名地址
-  }
+  },
+  chatboxApi: new chatboxApi()
 })

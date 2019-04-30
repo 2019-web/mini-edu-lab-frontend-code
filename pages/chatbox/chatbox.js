@@ -16,20 +16,20 @@ Page({
   onLoad: function (options) {
     console.log(options.chatbox_id);
     var that = this;
-    var app = getApp();
-
-    wx.request({
-      url: app.globalData.host+'/chatbox?chatbox_id=' + options.chatbox_id,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      success: function (res) {
-        console.log(res);
-        that.setData({
-          totalMessage : res.data[0].message
-        })
-      }
-    })    
+ 
+    that.getMessageList();
+    // wx.request({
+    //   url: app.globalData.host+'/chatbox?chatbox_id=' + options.chatbox_id,
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     console.log(res);
+    //     that.setData({
+    //       totalMessage : res.data[0].message
+    //     })
+    //   }
+    // })    
   },
 
   /**
@@ -125,5 +125,31 @@ Page({
     // duration: 300
     })
   })  
+  },
+
+
+  getMessageList:function(){
+
+
+   var app = getApp();
+    app.chatboxApi.getMessage().then(res=>{
+      this.setData({
+        // console.log(res)
+        totalMessage : res
+      })
+    })
+      
+    console.log(this.data.totalMessage)
+    // console.log(this.data.totalMessage[message])
+    //}//res end 
+    // ).catch({
+        // wx.showToast({
+        //   title: '出错了！',
+        //   icon: 'none'
+        // })
+        // console.log("HTTP 请求错误")
+      // })
+    // })
   }
+
 })
