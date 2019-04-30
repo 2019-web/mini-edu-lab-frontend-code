@@ -12,8 +12,7 @@
   <view class="course">
     <navigator
     url="../contents/contents?content_id=datastructure"
-    hover-class="navigator-hover"
-    >
+    hover-class="navigator-hover">
     <button>数据结构</button>
     </navigator>
   </view>

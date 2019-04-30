@@ -8,8 +8,7 @@
     <view class="chatbox">
         <navigator
         url="../chatbox/chatbox?chatbox_id={{item.chatbox_id}}"
-        hover-class="navigator-hover"
-        >
+        hover-class="navigator-hover">
         <button>{{item.text}}</button>
         </navigator>
     </view>

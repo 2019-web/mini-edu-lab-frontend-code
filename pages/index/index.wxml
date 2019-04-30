@@ -10,8 +10,7 @@
   <view style="margin-top:20px">
     <navigator
     url="../course/course"
-    hover-class="navigator-hover"
-    >
+    hover-class="navigator-hover">
     <button>进入课程</button>
     </navigator>
   </view>
