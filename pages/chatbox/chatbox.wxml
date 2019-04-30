@@ -7,15 +7,19 @@
     <!--{{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.type}}-->
 
 	<block wx:if="{{item.type === 'teacher'}}">
-      <view class="teacher" >
+      <view class="chat teacher" >
       <image src="{{item.image_url}}" class='user-photo'></image>
-     老师说的话: {{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}-{{item.type}}
+      <text class='chat-message'>
+    {{item.text}}
+     </text>
      </view>
      </block>
     <block wx:if="{{item.type === 'student'}}">
-      <view class="student" >
+      <view class="chat student" >
       <image src="{{item.image_url}}" class='user-photo'></image>
-    学生说的话:{{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}-{{item.type}}
+      <text class='chat-message'>
+    {{item.text}}
+    </text>
      </view>
      </block>
 
