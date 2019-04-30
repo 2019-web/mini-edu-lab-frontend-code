@@ -15,9 +15,10 @@ Page({
     console.log(options.content_id);
     
     var that = this;
+    var app = getApp();
 
     wx.request({
-      url: 'http://localhost:5300/contents?content_id=' + options.content_id,
+      url: app.globalData.host+'/contents?content_id=' + options.content_id,
       headers: {
         'Content-Type': 'application/json'
       },

@@ -16,9 +16,10 @@ Page({
   onLoad: function (options) {
     console.log(options.chatbox_id);
     var that = this;
+    var app = getApp();
 
     wx.request({
-      url: 'http://localhost:5300/chatbox?chatbox_id=' + options.chatbox_id,
+      url: app.globalData.host+'/chatbox?chatbox_id=' + options.chatbox_id,
       headers: {
         'Content-Type': 'application/json'
       },

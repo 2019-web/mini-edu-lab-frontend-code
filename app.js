@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    host: 'http://localhost:5300', // 后端的域名地址
   }
 })
