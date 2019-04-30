@@ -9,5 +9,4 @@
   box-sizing: border-box;
 } 
 
-/** 全局引入weui样式库 **/
-@import "./style/weui-wxss/dist/style/weui.wxss";
+/** 在Demo阶段最好别用库，一切最简 **/
