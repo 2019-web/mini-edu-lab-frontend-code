@@ -4,7 +4,20 @@
 <view id="container" style="padding-bottom:80px;">
 <view>
     <view wx:for="{{message}}" class='messageHeight'>
-    {{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.type}}
+    <!--{{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.type}}-->
+
+	<block wx:if="{{item.type === 'teacher'}}">
+      <view class="teacher">
+     老师说的话: {{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}-{{item.type}}
+     </view>
+     </block>
+    <block wx:if="{{item.type === 'student'}}">
+      <view class="student">
+    学生说的话:{{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}-{{item.type}}
+     </view>
+     </block>
+
+
     </view>
   </view>
 </view>  

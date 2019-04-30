@@ -3,9 +3,17 @@
 <view class="container">
   <view class="contents">
     <view wx:for="{{contents_name}}">
-      <view wx:if="{{item.type === 'second-level'}}">
+      <block wx:if="{{item.type === 'first-level'}}">
+      <view class='first-level'>
     {{item.id}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}-{{item.type}}
      </view>
+     </block>
+    <block wx:if="{{item.type === 'second-level'}}">
+      <view class='second-level'>
+    {{item.id}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}-{{item.type}}
+     </view>
+     </block>
+
     <view class="chatbox">
         <navigator
         url="../chatbox/chatbox?chatbox_id={{item.chatbox_id}}"

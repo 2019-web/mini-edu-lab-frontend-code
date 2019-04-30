@@ -1,1 +1,7 @@
 /* pages/chatbox/chatbox.wxss */
+.teacher{
+  background-color: red;
+}
+.student {
+  background-color: green;
+}

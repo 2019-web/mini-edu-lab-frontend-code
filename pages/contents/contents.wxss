@@ -1,1 +1,10 @@
 /* pages/contents/contents.wxss */
+
+.first-level {
+  background-color: red;
+}
+
+.second-level {
+  background-color: blue;
+  width: 70%;
+}
