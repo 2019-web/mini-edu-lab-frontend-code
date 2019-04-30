@@ -3,8 +3,9 @@
 <view class="container">
   <view class="contents">
     <view wx:for="{{contents_name}}">
-    {{item.id}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}
-    
+      <view wx:if="{{item.type === 'second-level'}}">
+    {{item.id}}-{{item.text}}-{{item.image_url}}-{{item.chatbox_id}}-{{item.type}}
+     </view>
     <view class="chatbox">
         <navigator
         url="../chatbox/chatbox?chatbox_id={{item.chatbox_id}}"
