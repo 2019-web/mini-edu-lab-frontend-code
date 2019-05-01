@@ -1,12 +1,11 @@
-
 class request {
   constructor() {
     this._header = {}
   }
 
-/**
- * 设置统一的异常处理
- */
+  /**
+   * 设置统一的异常处理
+   */
   setErrorHandler(handler) {
     this._errorHandler = handler;
   }

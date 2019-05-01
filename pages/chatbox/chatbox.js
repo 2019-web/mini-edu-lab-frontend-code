@@ -14,22 +14,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 打印页面contents传递过来的URL中的参数chatbox_id
     console.log(options.chatbox_id);
+   	// 把this对象复制到临时变量that    
     var that = this;
- 
-    that.getMessageList();
-    // wx.request({
-    //   url: app.globalData.host+'/chatbox?chatbox_id=' + options.chatbox_id,
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   success: function (res) {
-    //     console.log(res);
-    //     that.setData({
-    //       totalMessage : res.data[0].message
-    //     })
-    //   }
-    // })    
+	// 得到全部的聊天信息，实际情况下，如果一个页面的聊天信息比较多的化，最好能够分页加载数据
+    that.totalMessage(options.chatbox_id);  
   },
 
   /**
@@ -128,32 +118,24 @@ Page({
   },
 
 
-  getMessageList:function(){
+	totalMessage:function(chatbox_id){
+	// 通过 getApp 方法获取到全局唯一的 App 示例
+   	var app = getApp();
+   	//把this对象复制到临时变量that
+   	var that = this;
 
-   var app = getApp();
-   var that = this;
+   	app.chatboxApi.getMessage(chatbox_id).then(function(res){
+     	console.log(res[0].message);
+     	that.setData({
+       		totalMessage:res[0].message
+     	})
 
-   app.chatboxApi.getMessage().then(function(res){
-     console.log("聊天信息: ");
-     console.log(res[0].message);
-     that.setData({
-       totalMessage:res[0].message
-     })
-
-   })
-   console.log("聊天信息: ");
-   console.log();
-   console.log(this.data.totalMessage)
-    // console.log(this.data.totalMessage[message])
-    //}//res end 
-    // ).catch({
-        // wx.showToast({
-        //   title: '出错了！',
-        //   icon: 'none'
-        // })
-        // console.log("HTTP 请求错误")
-      // })
-    // })
+   	}).catch(function(error){
+		wx.showToast({
+			title: '出错了！',
+			icon: 'none',
+		})
+	})
   }
 
 })

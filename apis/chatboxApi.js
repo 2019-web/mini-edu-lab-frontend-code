@@ -1,7 +1,4 @@
-
 import request from './request.js'
-// var app = getApp();
-// console.log(app);
 
 class chatboxApi {
   constructor() {
@@ -23,7 +20,7 @@ class chatboxApi {
   /**
    * 获取所有信息
    */
-  getMessage(chatbox_id='ip', key = null) {
+  getMessage(chatbox_id, key = null) {
     let data = key != null ? { chatbox_id:chatbox_id, queryValue: key } : { chatbox_id:chatbox_id }
     return this._request.getRequest(this._baseUrl + '/chatbox', data).then(res => res.data)
   }
