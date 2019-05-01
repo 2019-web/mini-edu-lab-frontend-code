@@ -81,7 +81,7 @@ Page({
   },
 
   addMessage:function () {
-    var i = this.data.index ;
+    var i = this.data.index;
     console.log(this.data.totalMessage.length);
     var that = this;
     // 使得按钮不能点击
@@ -130,16 +130,20 @@ Page({
 
   getMessageList:function(){
 
-
    var app = getApp();
-    app.chatboxApi.getMessage().then(res=>{
-      this.setData({
-        // console.log(res)
-        totalMessage : res
-      })
-    })
-      
-    console.log(this.data.totalMessage)
+   var that = this;
+
+   app.chatboxApi.getMessage().then(function(res){
+     console.log("聊天信息: ");
+     console.log(res[0].message);
+     that.setData({
+       totalMessage:res[0].message
+     })
+
+   })
+   console.log("聊天信息: ");
+   console.log();
+   console.log(this.data.totalMessage)
     // console.log(this.data.totalMessage[message])
     //}//res end 
     // ).catch({

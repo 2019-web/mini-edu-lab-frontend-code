@@ -23,6 +23,7 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
+        console.log("打印contents的数据");
         console.log(res);
         that.setData({
           contents_name: res.data[0].contents_name
