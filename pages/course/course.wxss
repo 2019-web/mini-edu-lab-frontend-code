@@ -5,36 +5,36 @@
 
 
 .some-page-wrapper {
-    margin: 15px;
-    /*background-color: red;*/
-  }
+  margin: 15px;
+  /*background-color: red;*/
+}
   
-  .row {
-   margin: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-  }
+.row {
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
   
-  .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-  }
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
   
-  .blue-column {
-    /*background-color: blue;*/
-    height: 100px;
-  }
+.blue-column {
+  /*background-color: blue;*/
+  height: 100px;
+}
   
-  .green-column {
-      height: 100px;
-      /*background-color: green;*/
-  }
+.green-column {
+  height: 100px;
+  /*background-color: green;*/
+}
 
-  .imgCourse {
-  	width:90%;
-  	height:90%;
-  }
+.imgCourse {
+  width:90%;
+  height:90%;
+}

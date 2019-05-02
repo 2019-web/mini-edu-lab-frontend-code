@@ -5,9 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    message:[],
-    index: 0,
-    totalMessage:[]
+    message:[],       // chatbox页面加载的信息
+    index: 0,         // 下标
+    totalMessage:[],  // 所有的信息
+    clientHeight: 0   // 屏幕高度
   },
 
   /**
@@ -105,21 +106,40 @@ Page({
     //  rect.width    节点的宽度
     //  rect.height   节点的高度 
     //动态获取view元素的宽高
-    console.dir(res);
-    console.dir(res[0].height);
+    console.log(res);
+    console.log("节点的上边界坐标");
+    console.dir(res[0].top);
+    console.log("节点的下边界坐标"); 
     console.dir(res[0].bottom);
-    console.log(res[0].top); // 类messageHeight节点的上边界坐标
+    console.log("节点的高度");
+    console.log(res[0].height);
+    console.log("滚动的距离");
+    console.log(res[0].bottom + 50000);
+
+    // 获取系统的信息
+    wx.getSystemInfo({
+      success: function(res) {
+        // 获取屏幕高度
+        let clientHeight = res.windowHeight;
+        that.setData({
+          clientHeight: clientHeight
+        })
+      },
+    })
+    console.log("屏幕高度");
+    console.log(that.data.clientHeight+i * res[0].height);
+    //console.log(res[0].top); // 类messageHeight节点的上边界坐标
     wx.pageScrollTo({
-    // scrollTop	Number	是	滚动到页面的目标位置（单位px）
-    scrollTop: res[0].bottom+50000,
-    // duration: 300
+      // scrollTop	Number	是	滚动到页面的目标位置（单位px）
+      scrollTop: that.data.clientHeight + i * res[0].height,
+      // duration: 300
     })
   })  
   },
 
 
 	totalMessage:function(chatbox_id){
-	// 通过 getApp 方法获取到全局唯一的 App 示例
+	  // 通过 getApp 方法获取到全局唯一的 App 示例
    	var app = getApp();
    	//把this对象复制到临时变量that
    	var that = this;
@@ -131,10 +151,10 @@ Page({
      	})
 
    	}).catch(function(error){
-		wx.showToast({
-			title: '出错了！',
-			icon: 'none',
-		})
+  		wx.showToast({
+  			title: '出错了！',
+  			icon: 'none',
+  		})
 	})
   }
 

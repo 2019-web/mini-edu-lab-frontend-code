@@ -75,7 +75,7 @@
     <view class='column'>
       <view class='green-column'>
            
-<image src="" class="imgCourse"></image>
+        <image src="" class="imgCourse"></image>
         <text> </text>
 
         
