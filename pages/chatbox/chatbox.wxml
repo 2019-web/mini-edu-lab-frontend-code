@@ -5,13 +5,12 @@
 <view>
     <view wx:for="{{message}}" class='messageHeight'>
     <!--{{item.uuid}}-{{item.text}}-{{item.image_url}}-{{item.type}}-->
-
-	<block wx:if="{{item.type === 'teacher'}}">
+	  <block wx:if="{{item.type === 'teacher'}}">
       <view class="chat teacher" >
       <image src="{{item.image_url}}" class='user-photo'></image>
-      <text class='chat-message'>
+    <text class='chat-message'>
     {{item.text}}
-     </text>
+    </text>
      </view>
      </block>
     <block wx:if="{{item.type === 'student'}}">
@@ -22,8 +21,6 @@
     </text>
      </view>
      </block>
-
-
     </view>
   </view>
 </view>  
