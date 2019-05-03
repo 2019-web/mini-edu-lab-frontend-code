@@ -7,8 +7,7 @@ Page({
   data: {
     message:[],       // chatbox页面加载的信息
     index: 0,         // 下标
-    totalMessage:[],  // 所有的信息
-    clientHeight: 0   // 屏幕高度
+    totalMessage:[]  // 所有的信息
   },
 
   /**
@@ -118,17 +117,6 @@ Page({
     console.log("节点的右边界坐标");
     console.log(res[0].right);
 
-    // 获取系统的信息
-    wx.getSystemInfo({
-      success: function(res) {
-        // 获取屏幕高度
-        let clientHeight = res.windowHeight;
-        that.setData({
-          clientHeight: clientHeight
-        })
-      },
-    })
-    //console.log(res[0].top); // 类messageHeight节点的上边界坐标
     wx.pageScrollTo({
       // scrollTop	Number	是	滚动到页面的目标位置（单位px）
       scrollTop:  res[0].height,
