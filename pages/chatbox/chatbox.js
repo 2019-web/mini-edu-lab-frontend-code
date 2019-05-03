@@ -131,7 +131,7 @@ Page({
     //console.log(res[0].top); // 类messageHeight节点的上边界坐标
     wx.pageScrollTo({
       // scrollTop	Number	是	滚动到页面的目标位置（单位px）
-      scrollTop: that.data.clientHeight + res[0].height,
+      scrollTop:  res[0].height,
       // duration: 300
     })
   })  
